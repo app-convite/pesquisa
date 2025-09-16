@@ -31,8 +31,7 @@
       gap:14px;
       align-items:center;
     }
-    h1{font-size:20px;margin:0 0 6px;color:var(--accent)}
-    p.lead{margin:0 0 12px;color:#224b2e}
+    h1{font-size:20px;margin:0 0 6px;color:var(--accent);font-weight:700}
     /* make the vturb player responsive */
     vturb-smartplayer{width:100%;max-width:460px;display:block;margin:0 auto}
 
@@ -71,8 +70,7 @@
 <body>
   <div class="wrap">
     <div class="player-box">
-      <h1>Assista agora — apresentação</h1>
-      <p class="lead">Vídeo abaixo. Página limpa com fundo verde.</p>
+      <h1><b>Assista Apresentação para Descobrir a Receita do Mounjaro</b></h1>
 
       <!-- VSL player fornecido pelo usuário -->
       <vturb-smartplayer id="vid-68c8a6e54f8b3242a3fb5e83" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
@@ -122,11 +120,11 @@
         const dur = 800;
         animateValue(current, next, dur);
         current = next;
-        const wait = Math.floor(Math.random() * 2000) + 1200;
+        const wait = Math.floor(Math.random() * 4000) + 3000; // Aumentei o delay (3 a 7s)
         setTimeout(tick, wait);
       }
 
-      setTimeout(tick, 800);
+      setTimeout(tick, 1500);
 
       const liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-live','polite');
